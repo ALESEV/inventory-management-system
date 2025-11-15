@@ -1,5 +1,5 @@
 @extends("layout")
 
 @section("main")
-    <p>Home</p>
+    <p>Login</p>
 @endsection

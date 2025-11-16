@@ -10,7 +10,7 @@
     @vite('resources/css/app.css')
 </head>
 <body>
-    <header class="bg-white border-b border-gray-300 shadow-lg relative z-20">
+    <header class="bg-blue-50/50 backdrop-blur-md border-b border-transparent shadow-2xl sticky top-0 z-20">
         <div class="container mx-auto flex justify-between items-center py-5">
             
             <a class="flex items-center" href="{{ route('home') }}">
@@ -47,7 +47,7 @@
                         <a href="{{ route('login') }}">Login</a>
                     </li>
 
-                    <li class="flex items-center gap-1 text-blue-700 hover:text-white hover:bg-blue-700 hover:border hover:rounded">
+                    <li class="flex items-center gap-1 text-blue-700 border border-transparent rounded hover:text-white hover:bg-blue-700 hover:border-blue-700">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
                         </svg>
@@ -61,14 +61,52 @@
 
     <hero class="relative">
         <div class="h-[500px] overflow-hidden w-full">
-            <img class="w-full h-[500px] object-cover opacity-80" src="{{ asset('storage/warehouse_system.png') }}" alt="Warehouse picture">
+            <img class="w-full h-[500px] object-cover opacity-90" src="{{ asset('storage/warehouse_system.png') }}" alt="Warehouse picture">
         </div>
-        <div class="absolute top-1/2 left-8 transform -translate-y-1/2 text-white">
+        <div class="absolute top-1/2 left-24 transform -translate-y-1/2 text-white">
             <h1 class="text-6xl font-bold">Inventory Software:</h1>
             <h3 class="text-4xl mt-2">your stock, simplified.</h3>
-            <a href="{{ route('signup') }}" class="inline-block mt-6 bg-white bg-opacity-30 rounded border border-transparent text-blue-700 font-semibold px-6 py-3 hover:bg-blue-700 hover:bg-opacity-50 hover:text-white">Sign Up Free</a>
+            <a href="{{ route('signup') }}" 
+                class="inline-block mt-6 rounded border border-white text-white font-semibold px-6 py-3 bg-blue-700 hover:text-blue-700 hover:bg-[rgba(255,255,255,0.3)]">
+                Sign Up Free
+            </a>
+
         </div>
     </hero>
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto border-transparent rounded-2xl flex justify-between items-center bg-blue-50">
+            <div class="w-1/2 pr-3 flex justify-center p-10">
+                <img class="h-120" src="{{ asset('storage/boxes.avif') }}"> 
+            </div>
+            <div class="w-1/2 pl-1 flex-col p-18">
+                <h2 class="text-4xl font-extrabold text-gray-800 pb-10">
+                    Inventory management software with Nova Inventory
+                </h2>
+                <p class="text-2xl">Take control of your stock with Nova inventory software for small businesses. Instead of juggling spreadsheets and multiple tools, get one smooth system. Automatically track your items so you know when to reorder, breeze through your digital billing, and connect apps for extra tools.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white">
+        <div class="container mx-auto border-transparent rounded-2xl flex justify-center bg-blue-50">
+            <div class="pb-13">
+                <h2 class="text-3xl font-extrabold text-gray-800 pb-10">
+                    How Nova's stock control software boosts your business
+                </h2>
+                <p class="text-2xl">Nova organizes the items you buy and sell in a single place. You have all the crucial info, none of the fuss.</p>
+            </div>
+            <div>
+                <div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-icon lucide-check"><path d="M20 6 9 17l-5-5"/></svg>
+                    </div>
+                </div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </section>
 
 
 

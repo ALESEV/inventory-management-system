@@ -227,7 +227,7 @@
         </div>
     </section>
 
-        <section class="bg-white">
+    <section class="bg-white">
         <div class="container mx-auto flex justify-between items-center">
             <div class="w-3/5 pr-3 pl-25 flex-col">
                 <h2 class="text-4xl font-extrabold text-gray-800 pb-10">
@@ -281,10 +281,105 @@
                          <div class="flex gap-1">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-500 font-extrabold lucide lucide-check-icon lucide-check"><path d="M20 6 9 17l-5-5"/></svg>
                         <p>Customize to suit your needs</p> 
-                    </div>
-                    <a href="" class="flex items-center gap-2 text-black underline decoration-blue-500 underline-offset-4 hover:text-blue-500 hover:decoration-black font-extrabold mt-3 text-lg">Accounting software for your small business
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-500 lucide lucide-square-arrow-right-icon lucide-square-arrow-right"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M8 12h8"/><path d="m12 16 4-4-4-4"/></svg></a>         
+                    </div>         
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white">
+        <div class="container mx-auto flex flex-col items-center py-16">
+            <h2 class="text-4xl font-extrabold text-gray-800 pb-10">
+                Ready to get started?
+            </h2>
+
+            <div class="flex flex-col md:flex-row gap-8">
+
+                <div class="flex flex-col justify-between w-[350px] border-t-10 border-blue-400 rounded-b-2xl shadow-lg p-8">
+                    <div>
+                        <h2 class="text-3xl font-bold pb-4">One User Free</h2>
+
+                        <div class="flex items-start gap-1">
+                            <span class="text-2xl text-blue-500 font-semibold">€</span>
+                            <span class="text-6xl text-blue-500 font-extrabold">0</span>
+                        </div>
+
+                        <p class="pt-4 text-gray-700">
+                            Basic access to the <span class="font-semibold">Nova platform</span><br>
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col gap-3 mt-8">
+                        <button class="bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-xl font-semibold">
+                            START NOW
+                        </button>
+                        <button class="border-transparent text-transparent py-3 rounded-xl font-semibold">
+                            TRANSPARENT
+                        </button>
+                    </div>
+                </div>
+
+                <!-- STANDARD -->
+                <div class="flex flex-col justify-between w-[350px] border-t-10 border-red-400 rounded-b-2xl shadow-lg p-8">
+                    <div>
+                        <h2 class="text-3xl font-bold pb-4">Standard</h2>
+
+                        <div class="flex items-start gap-2">
+                            <span class="text-2xl text-red-400 font-semibold">€</span>
+                            <span class="text-6xl text-red-400 font-extrabold leading-none">14</span>
+                            <div>
+                                <span class="text-red-400 text-2xl">.80</span>
+                                <p class="text-gray-600 text-sm">/ user / month</p>
+                            </div>
+                        </div>
+
+                        <p class="pt-6 text-gray-700">
+                            Full access to the <span class="font-semibold">Nova platform</span><br>
+                            Multi-user collaboration in real time
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col gap-3 mt-8">
+                        <button class="bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-xl font-semibold">
+                            BUY NOW
+                        </button>
+                        <button class="border border-gray-300 text-gray-700 py-3 rounded-xl font-semibold hover:bg-gray-200">
+                            FREE TRIAL
+                        </button>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-between w-[350px] border-t-10 border-green-400 rounded-b-2xl shadow-lg p-8">
+                    <div>
+                        <h2 class="text-3xl font-bold pb-4">Custom</h2>
+
+                        <div class="flex items-start gap-2">
+                            <span class="text-2xl text-green-500 font-semibold">€</span>
+                            <span class="text-6xl text-green-500 font-extrabold leading-none">22</span>
+                            <div>
+                                <span class="text-green-500 text-2xl">.40</span>
+                                <p class="text-gray-600 text-sm">/ user / month</p>
+                            </div>
+                        </div>
+
+                        <p class="pt-6 text-gray-700">
+                            Full access to the <span class="font-semibold">Nova platform</span><br>
+                            Multi-user collaboration in real time<br>
+                            Advanced customization<br>
+                            Priority support & onboarding
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col gap-3 mt-8">
+                        <button class="bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-xl font-semibold">
+                            BUY NOW
+                        </button>
+                        <button class="border border-gray-300 text-gray-700 py-3 rounded-xl font-semibold hover:bg-gray-200">
+                            FREE TRIAL
+                        </button>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>

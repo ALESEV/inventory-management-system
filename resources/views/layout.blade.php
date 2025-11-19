@@ -287,11 +287,41 @@
         </div>
     </section>
 
-    <section class="bg-white">
+    <section class="bg-white" x-data="{ yearly: false }">
+
         <div class="container mx-auto flex flex-col items-center py-16">
-            <h2 class="text-4xl font-extrabold text-gray-800 pb-10">
+
+            <h2 class="text-4xl font-extrabold text-gray-800 pb-6">
                 Ready to get started?
             </h2>
+
+            <div class="flex items-center gap-4 mb-10">
+
+                <span 
+                    class="font-semibold"
+                    :class="yearly ? 'text-gray-700' : 'text-blue-500'"
+                >
+                    Monthly
+                </span>
+
+                <button 
+                    @click="yearly = !yearly" 
+                    class="w-16 h-8 bg-gray-300 rounded-full relative transition"
+                >
+                    <span 
+                        class="absolute top-1 left-0.5 h-6 w-6 bg-white rounded-full shadow transition"
+                        :class="yearly ? 'translate-x-8' : 'translate-x-1'"
+                    ></span>
+                </button>
+
+                <span 
+                    class="font-semibold"
+                    :class="yearly ? 'text-blue-500' : 'text-gray-700'"
+                >
+                    Yearly <span class="font-normal">(Save 20%)</span>
+                </span>
+            </div>
+
 
             <div class="flex flex-col md:flex-row gap-8">
 
@@ -319,19 +349,31 @@
                     </div>
                 </div>
 
-                <!-- STANDARD -->
                 <div class="flex flex-col justify-between w-[350px] border-t-10 border-red-400 rounded-b-2xl shadow-lg p-8">
                     <div>
                         <h2 class="text-3xl font-bold pb-4">Standard</h2>
 
-                        <div class="flex items-start gap-2">
-                            <span class="text-2xl text-red-400 font-semibold">€</span>
-                            <span class="text-6xl text-red-400 font-extrabold leading-none">14</span>
-                            <div>
-                                <span class="text-red-400 text-2xl">.80</span>
-                                <p class="text-gray-600 text-sm">/ user / month</p>
+                        <template x-if="!yearly">
+                            <div class="flex items-start gap-2">
+                                <span class="text-2xl text-red-400 font-semibold">€</span>
+                                <span class="text-6xl text-red-400 font-extrabold leading-none">14</span>
+                                <div>
+                                    <span class="text-red-400 text-2xl">.80</span>
+                                    <p class="text-gray-600 text-sm">/ user / month</p>
+                                </div>
                             </div>
-                        </div>
+                        </template>
+
+                        <template x-if="yearly">
+                            <div class="flex items-start gap-2">
+                                <span class="text-2xl text-red-400 font-semibold">€</span>
+                                <span class="text-6xl text-red-400 font-extrabold leading-none">11</span>
+                                <div>
+                                    <span class="text-red-400 text-2xl">.80</span>
+                                    <p class="text-gray-600 text-sm">/ user / month</p>
+                                </div>
+                            </div>
+                        </template>
 
                         <p class="pt-6 text-gray-700">
                             Full access to the <span class="font-semibold">Nova platform</span><br>
@@ -349,18 +391,32 @@
                     </div>
                 </div>
 
+
                 <div class="flex flex-col justify-between w-[350px] border-t-10 border-green-400 rounded-b-2xl shadow-lg p-8">
                     <div>
                         <h2 class="text-3xl font-bold pb-4">Custom</h2>
 
-                        <div class="flex items-start gap-2">
-                            <span class="text-2xl text-green-500 font-semibold">€</span>
-                            <span class="text-6xl text-green-500 font-extrabold leading-none">22</span>
-                            <div>
-                                <span class="text-green-500 text-2xl">.40</span>
-                                <p class="text-gray-600 text-sm">/ user / month</p>
+                        <template x-if="!yearly">
+                            <div class="flex items-start gap-2">
+                                <span class="text-2xl text-green-500 font-semibold">€</span>
+                                <span class="text-6xl text-green-500 font-extrabold leading-none">22</span>
+                                <div>
+                                    <span class="text-green-500 text-2xl">.40</span>
+                                    <p class="text-gray-600 text-sm">/ user / month</p>
+                                </div>
                             </div>
-                        </div>
+                        </template>
+
+                        <template x-if="yearly">
+                            <div class="flex items-start gap-2">
+                                <span class="text-2xl text-green-500 font-semibold">€</span>
+                                <span class="text-6xl text-green-500 font-extrabold leading-none">17</span>
+                                <div>
+                                    <span class="text-green-500 text-2xl">.90</span>
+                                    <p class="text-gray-600 text-sm">/ user / month</p>
+                                </div>
+                            </div>
+                        </template>
 
                         <p class="pt-6 text-gray-700">
                             Full access to the <span class="font-semibold">Nova platform</span><br>
@@ -384,8 +440,95 @@
         </div>
     </section>
 
+
+    <section class="py-20 bg-white" id="faq">
+        <div class="container mx-auto max-w-3xl">
+
+            <h2 class="text-4xl font-extrabold text-center mb-12">
+                Frequently Asked Questions
+            </h2>
+
+            <div class="space-y-4">
+
+                <div x-data="{ open: false }" class="border-b py-4">
+                    <button @click="open = !open" class="w-full flex justify-between items-center text-left">
+                        <span class="text-lg font-semibold hover:text-blue-500">What is Nova Inventory?</span>
+                        <span class="text-2xl" x-text="open ? '-' : '+'"></span>
+                    </button>
+                    <div x-show="open" x-collapse class="mt-3 text-gray-700">
+                        Nova Inventory is a cloud-based stock and invoicing system that helps small businesses manage inventory efficiently.
+                    </div>
+                </div>
+
+                <div x-data="{ open: false }" class="border-b py-4">
+                    <button @click="open = !open" class="w-full flex justify-between items-center text-left">
+                        <span class="text-lg font-semibold hover:text-blue-500">Does Nova work for small businesses?</span>
+                        <span class="text-2xl" x-text="open ? '-' : '+'"></span>
+                    </button>
+                    <div x-show="open" x-collapse class="mt-3 text-gray-700">
+                        Yes! Nova is designed specifically for small and medium-sized businesses needing simple inventory automation.
+                    </div>
+                </div>
+
+                <div x-data="{ open: false }" class="border-b py-4">
+                    <button @click="open = !open" class="w-full flex justify-between items-center text-left">
+                        <span class="text-lg font-semibold hover:text-blue-500">Can I track stock levels in real time?</span>
+                        <span class="text-2xl" x-text="open ? '-' : '+'"></span>
+                    </button>
+                    <div x-show="open" x-collapse class="mt-3 text-gray-700">
+                        Yes — Nova updates stock quantities instantly as products are purchased, sold, or adjusted.
+                    </div>
+                </div>
+
+                <div x-data="{ open: false }" class="border-b py-4">
+                    <button @click="open = !open" class="w-full flex justify-between items-center text-left">
+                        <span class="text-lg font-semibold hover:text-blue-500">Does Nova generate invoices automatically?</span>
+                        <span class="text-2xl" x-text="open ? '-' : '+'"></span>
+                    </button>
+                    <div x-show="open" x-collapse class="mt-3 text-gray-700">
+                        Nova can prefill invoices and purchase orders with saved item data to reduce manual work.
+                    </div>
+                </div>
+
+                <div x-data="{ open: false }" class="border-b py-4">
+                    <button @click="open = !open" class="w-full flex justify-between items-center text-left">
+                        <span class="text-lg font-semibold hover:text-blue-500">How many items can I manage?</span>
+                        <span class="text-2xl" x-text="open ? '-' : '+'"></span>
+                    </button>
+                    <div x-show="open" x-collapse class="mt-3 text-gray-700">
+                        The system supports up to 4,000 items, making it ideal for most small and medium operations.
+                    </div>
+                </div>
+
+                <div x-data="{ open: false }" class="border-b py-4">
+                    <button @click="open = !open" class="w-full flex justify-between items-center text-left">
+                        <span class="text-lg font-semibold hover:text-blue-500">Can my team use it together?</span>
+                        <span class="text-2xl" x-text="open ? '-' : '+'"></span>
+                    </button>
+                    <div x-show="open" x-collapse class="mt-3 text-gray-700">
+                        Yes — Nova supports multi-user collaboration in real time.
+                    </div>
+                </div>
+
+                <div x-data="{ open: false }" class="border-b py-4">
+                    <button @click="open = !open" class="w-full flex justify-between items-center text-left">
+                        <span class="text-lg font-semibold hover:text-blue-500">Is there a free version?</span>
+                        <span class="text-2xl" x-text="open ? '-' : '+'"></span>
+                    </button>
+                    <div x-show="open" x-collapse class="mt-3 text-gray-700">
+                        Yes — the One User Free plan gives full basic access with no cost.
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
     <main>
         @yield("main")
     </main>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </body>
 </html>

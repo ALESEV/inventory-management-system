@@ -6,6 +6,7 @@
     <title>Nova Inventory - Inventory Management System</title>
 
     <link rel="icon" type="image/png" href="{{ asset('storage/logo.png') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     @vite('resources/css/app.css')
 </head>
@@ -59,20 +60,122 @@
 
     </header>
 
-    <hero class="relative">
-        <div class="h-[500px] overflow-hidden w-full">
-            <img class="w-full h-[500px] object-cover opacity-90" src="{{ asset('storage/warehouse_system.png') }}" alt="Warehouse picture">
-        </div>
-        <div class="absolute top-1/2 left-24 transform -translate-y-1/2 text-white">
-            <h1 class="text-6xl font-bold">Inventory Software:</h1>
-            <h3 class="text-4xl mt-2">your stock, simplified.</h3>
-            <a href="{{ route('signup') }}" 
-                class="inline-block mt-6 rounded border border-white text-white font-semibold px-6 py-3 bg-blue-700 hover:text-blue-700 hover:bg-[rgba(255,255,255,0.3)]">
-                Sign Up Free
-            </a>
+    <div x-data 
+        x-init="
+            new Swiper($refs.heroSwiper, {
+                loop: true,
+                effect: 'fade',
+                fadeEffect: { crossFade: true },
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: false
+                },
+                pagination: {
+                    el: $refs.pagination,
+                    clickable: true
+                }
+            });
+        "
+        class="relative">
 
+        <div class="swiper h-[500px] w-full" x-ref="heroSwiper">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide relative">
+                    <img src='{{ asset("storage/slide_0.png") }}'
+                        class="w-full h-[500px] object-cover opacity-90">
+
+                    <div class="absolute top-1/2 left-24 -translate-y-1/2 text-white">
+                        <h1 class="text-6xl font-bold">Inventory Software</h1>
+                        <h3 class="text-4xl mt-2">your stock, simplified.</h3>
+
+                        <a href="#"
+                        class="inline-block mt-6 rounded border border-white text-white font-semibold px-6 py-3 bg-blue-700 hover:bg-blue-500">
+                            Start Now
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide relative">
+                    <img src='{{ asset("storage/slide_1.jpeg") }}'
+                        class="w-full h-[500px] object-cover opacity-90">
+
+                    <div class="absolute top-1/2 left-24 -translate-y-1/2 text-white">
+                        <h1 class="text-6xl font-bold">Inventory Software</h1>
+                        <h3 class="text-4xl mt-2">your stock, simplified.</h3>
+
+                        <a href="#"
+                        class="inline-block mt-6 rounded border border-white text-white font-semibold px-6 py-3 bg-blue-700 hover:bg-blue-500">
+                            Start Now
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide relative">
+                    <img src='{{ asset("storage/slide_2.jpeg") }}'
+                        class="w-full h-[500px] object-cover opacity-90">
+
+                    <div class="absolute top-1/2 left-24 -translate-y-1/2 text-white">
+                        <h1 class="text-6xl font-bold">Inventory Software</h1>
+                        <h3 class="text-4xl mt-2">your stock, simplified.</h3>
+
+                        <a href="#"
+                        class="inline-block mt-6 rounded border border-white text-white font-semibold px-6 py-3 bg-blue-700 hover:bg-blue-500">
+                            Start Now
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide relative">
+                    <img src='{{ asset("storage/slide_3.jpeg") }}'
+                        class="w-full h-[500px] object-cover opacity-90">
+
+                    <div class="absolute top-1/2 left-24 -translate-y-1/2 text-white">
+                        <h1 class="text-6xl font-bold">Inventory Software</h1>
+                        <h3 class="text-4xl mt-2">your stock, simplified.</h3>
+
+                        <a href="#"
+                        class="inline-block mt-6 rounded border border-white text-white font-semibold px-6 py-3 bg-blue-700 hover:bg-blue-500">
+                            Start Now
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide relative">
+                    <img src='{{ asset("storage/slide_4.jpeg") }}'
+                        class="w-full h-[500px] object-cover opacity-90">
+
+                    <div class="absolute top-1/2 left-24 -translate-y-1/2 text-white">
+                        <h1 class="text-6xl font-bold">Inventory Software</h1>
+                        <h3 class="text-4xl mt-2">your stock, simplified.</h3>
+
+                        <a href="#"
+                        class="inline-block mt-6 rounded border border-white text-white font-semibold px-6 py-3 bg-blue-700 hover:bg-blue-500">
+                            Start Now
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide relative">
+                    <img src='{{ asset("storage/slide_5.jpeg") }}'
+                        class="w-full h-[500px] object-cover opacity-90">
+
+                    <div class="absolute top-1/2 left-24 -translate-y-1/2 text-white">
+                        <h1 class="text-6xl font-bold">Inventory Software</h1>
+                        <h3 class="text-4xl mt-2">your stock, simplified.</h3>
+
+                        <a href="#"
+                        class="inline-block mt-6 rounded border border-white text-white font-semibold px-6 py-3 bg-blue-700 hover:bg-blue-500">
+                            Start Now
+                        </a>
+                    </div>
+                </div>
+
+            </div>
         </div>
-    </hero>
+
+        <div class="swiper-pagination" x-ref="pagination"></div>
+    </div>
 
     <section class="py-16 bg-white">
         <div class="container mx-auto border-transparent rounded-2xl flex justify-between items-center bg-blue-50">
@@ -100,7 +203,7 @@
                 <div class="w-1/3 flex-col px-15">
                     <div class="flex items-center gap-4 pb-3">
                         <div class="bg-blue-500/90 shadow-2xs shadow-black/40 p-3 rounded-2xl">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white lucide lucide-check-icon lucide-check"><path d="M20 6 9 17l-5-5"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white lucide lucide-clipboard-clock-icon lucide-clipboard-clock"><path d="M16 14v2.2l1.6 1"/><path d="M16 4h2a2 2 0 0 1 2 2v.832"/><path d="M8 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h2"/><circle cx="16" cy="16" r="6"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg>
                         </div>
                         <h3 class="text-lg font-extrabold">Track your stock levels in real time</h3>
                     </div>
@@ -111,7 +214,7 @@
                 <div class="w-1/3 flex-col px-15">
                     <div class="flex items-center gap-4 pb-3">
                         <div class="bg-blue-500/90 shadow-2xs shadow-black/40 p-3 rounded-2xl">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white lucide lucide-check-icon lucide-check"><path d="M20 6 9 17l-5-5"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white lucide lucide-package-search-icon lucide-package-search"><path d="M21 10V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l2-1.14"/><path d="m7.5 4.27 9 5.15"/><polyline points="3.29 7 12 12 20.71 7"/><line x1="12" x2="12" y1="22" y2="12"/><circle cx="18.5" cy="15.5" r="2.5"/><path d="M20.27 17.27 22 19"/></svg>
                         </div>
                         <h3 class="text-lg font-extrabold">Improve your product management</h3>
                     </div>
@@ -122,7 +225,7 @@
                 <div class="w-1/3 flex-col px-17">
                     <div class="flex items-center gap-4 pb-3">
                         <div class="bg-blue-500/90 shadow-2xs shadow-black/40 p-3 rounded-2xl">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white lucide lucide-check-icon lucide-check"><path d="M20 6 9 17l-5-5"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white lucide lucide-squares-exclude-icon lucide-squares-exclude"><path d="M16 12v2a2 2 0 0 1-2 2H9a1 1 0 0 0-1 1v3a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2h0"/><path d="M4 16a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3a1 1 0 0 1-1 1h-5a2 2 0 0 0-2 2v2"/></svg>
                         </div>
                         <h3 class="text-lg font-extrabold">Save time on your sales admin</h3>
                     </div>
@@ -525,10 +628,73 @@
         </div>
     </section>
 
+    <footer class="bg-blue-50/50 border-t border-gray-200 mt-20 pt-10 pb-2">
+        <div class="container mx-auto text-center flex justify-between pb-2">
+            <div class="flex flex-col gap-2 text-start">
+                <div class="flex gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone-icon lucide-phone"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
+                    <a href="" class="text-black text-lg font-semibold hover:text-blue-500 hover:underline">
+                        +373 68 111 000
+                    </a>
+
+                </div>
+
+                <div class="flex gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+                    <a href="" class="text-black text-lg font-semibold hover:text-blue-500 hover:underline">support@novaintentory.com</a>
+                </div>
+
+                <div class="flex gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin-icon lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                    <p class="text-black text-lg font-semibold">Chisinau, bd. Dacia 14</p>
+                </div>
+            </div>
+
+            <div class="flex justify-center gap-6 mb-6">
+
+                <a href="#" class="text-blue-700 hover:text-blue-500 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M22 12.07C22 6.48 17.52 2 11.93 2S2 6.48 2 12.07c0 5.02 3.66 9.19 8.44 9.93v-7.03H7.9v-2.9h2.54V9.83c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.55v1.87h2.78l-.44 2.9h-2.34V22c4.78-.74 8.44-4.91 8.44-9.93z"/>
+                    </svg>
+                </a>
+
+                <a href="#" class="text-blue-700 hover:text-blue-500 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2c1.66 0 3 1.34 3 3v10c0 1.66-1.34 3-3 3H7c-1.66 0-3-1.34-3-3V7c0-1.66 1.34-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.8-.9a1.1 1.1 0 11-2.2 0 1.1 1.1 0 012.2 0z"/>
+                    </svg>
+                </a>
+
+                <a href="#" class="text-blue-700 hover:text-blue-500 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19.6 3.2H4.4A4.4 4.4 0 000 7.6v8.8a4.4 4.4 0 004.4 4.4h15.2a4.4 4.4 0 004.4-4.4V7.6a4.4 4.4 0 00-4.4-4.4zM9.6 16V8l6.4 4-6.4 4z"/>
+                    </svg>
+                </a>
+
+                <a href="#" class="text-blue-700 hover:text-blue-500 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M21 7.5a5.5 5.5 0 01-3.7-1.4A5.4 5.4 0 0115 2h-3v14.3a2.7 2.7 0 11-2.7-2.7c.3 0 .6.1.9.2V10a5.5 5.5 0 00-.9-.1 5.7 5.7 0 105.7 5.7V8.6a8.3 8.3 0 003.7.9V7.5z"/>
+                    </svg>
+                </a>
+
+                <a href="#" class="text-blue-700 hover:text-blue-500 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M4.98 3.5a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM3 8.98h4v12H3v-12zM14.5 8.9c-2.1 0-3.5 1.1-4.1 2.2v-2.1h-4v12h4v-6.5c0-1.7.9-2.8 2.4-2.8 1.4 0 2.2.9 2.2 2.8v6.5h4v-7.1c0-4-2.1-5.8-4.5-5.8z"/>
+                    </svg>
+                </a>
+
+            </div>
+        </div>
+        <div class="container mx-auto">
+            <h3 class="text-black font-semibold text-center">© NOVA INVENTORY 2025</h3>
+        </div>
+    </footer>
+
+
     <main>
         @yield("main")
     </main>
 
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </body>
 </html>

@@ -1,18 +1,13 @@
-<header 
-    x-data="{ open: false }"
-    class="bg-blue-50/50 backdrop-blur-md border-b border-transparent shadow-2xl sticky top-0 z-20"
->
-    <div class="container mx-auto flex flex-wrap justify-between items-center py-5">
+<header x-data="{ open: false }" class="bg-blue-50/50 backdrop-blur-md border-b border-transparent shadow-2xl sticky top-0 z-20">
+    
+    <div class="container mx-auto flex flex-wrap justify-between items-center py-5 px-5">
 
         <a class="flex items-center gap-2" href="{{ route('home') }}">
             <img class="w-10" src="{{ asset('storage/logo.png') }}" alt="Logo Nova Inventory">
             <h1 class="text-blue-700 font-semibold hover:text-black">Nova Inventory</h1>                
         </a>
 
-        <button 
-            class="lg:hidden text-blue-700 focus:outline-none"
-            @click="open = !open"
-        >
+        <button @click="open = !open" class="lg:hidden text-blue-700 focus:outline-none">
             <svg x-show="!open" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                       d="M4 6h16M4 12h16M4 18h16" />
@@ -43,29 +38,36 @@
                     <a href="{{ route('contacts') }}">Contacts</a>
                 </li>
 
-                <li class="flex items-center gap-1 hover:text-blue-700">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 lucide lucide-log-in" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="m10 17 5-5-5-5"/><path d="M15 12H3"/><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/>
-                    </svg>
-                    <a href="{{ route('login') }}">Login</a>
-                </li>
+                @guest
+                    <li class="flex items-center gap-1 hover:text-blue-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 lucide lucide-log-in" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="m10 17 5-5-5-5"/><path d="M15 12H3"/><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/>
+                        </svg>
+                        <a href="{{ route('login') }}">Login</a>
+                    </li>
 
-                <li class="flex items-center gap-1 text-blue-700 border border-transparent rounded hover:text-white hover:bg-blue-700 hover:border-blue-700">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M12 4v16m8-8H4" />
-                    </svg>
-                    <a href="{{ route('signup') }}">Sign Up</a>
-                </li>
+                    <li class="flex items-center gap-1 text-blue-700 border border-transparent rounded hover:text-white hover:bg-blue-700 hover:border-blue-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 4v16m8-8H4" />
+                        </svg>
+                        <a href="{{ route('register') }}">Sign Up</a>
+                    </li>
+                @endguest
+                @auth
+                    <li>
+                        <a class="hover:text-blue-700" href="">Account</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-blue-700" href="{{ route('logout') }}">Logout</a>
+                    </li>
+                @endauth
 
             </ul>
         </nav>
     </div>
 
-    <nav 
-        x-show="open"
-        class="lg:hidden bg-blue-50/80 backdrop-blur-md shadow-inner"
-    >
+    <nav x-show="open" class="lg:hidden bg-blue-50/80 backdrop-blur-md shadow-inner">
         <ul class="flex flex-col gap-4 py-5 px-6 text-lg">
 
             <li class="flex items-center gap-2 hover:text-blue-700">
@@ -83,7 +85,7 @@
                 </svg>
                 <a href="{{ route('contacts') }}">Contacts</a>
             </li>
-
+            @guest
             <li class="flex items-center gap-2 hover:text-blue-700">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 lucide lucide-log-in" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="m10 17 5-5-5-5"/><path d="M15 12H3"/><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/>
@@ -96,8 +98,21 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                           d="M12 4v16m8-8H4" />
                 </svg>
-                <a href="{{ route('signup') }}">Sign Up</a>
+                <a href="{{ route('register') }}">Sign Up</a>
             </li>
+            @endguest
+            @auth
+                <li>
+                    <a class="hover:text-blue-700" href="">Account</a>
+                </li>
+                <li>
+                    <a class="hover:text-blue-700" href="{{ route('logout') }}">Logout</a>
+                </li>
+            @endauth
+            
+                
+            
+
 
         </ul>
     </nav>

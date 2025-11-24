@@ -20,14 +20,4 @@ class MainController extends Controller
     {
         return view("contacts");
     }
-
-    public function login()
-    {
-        return view("login");
-    }
-
-    public function signup()
-    {
-        return view("signup");
-    }
 }

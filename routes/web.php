@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AppController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\MainController;
 use Illuminate\Support\Facades\Route;
@@ -19,3 +20,5 @@ Route::post("/register", [AuthController::class, "registerPost"])->name("registe
 Route::post("/login", [AuthController::class, "loginPost"])->name("loginPost");
 
 Route::get("/logout", [AuthController::class, "logout"])->name("logout");
+
+Route::get("/app", [AppController::class, "homepageApp"])->middleware('auth')->name("homepageApp");

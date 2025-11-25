@@ -56,9 +56,14 @@
                 @endguest
                 @auth
                     <li>
-                        <a class="hover:text-blue-700" href="">Account</a>
+                        <a href="{{ route('homepageApp') }}"
+                           class="flex items-center justify-center px-2 rounded-full bg-blue-600 text-white font-semibold text-lg hover:opacity-80 transition">
+                            {{ strtoupper(auth()->user()->name) }} enter App
+                        </a>
                     </li>
-                    <li>
+
+                    <li class="flex items-center gap-1 hover:text-blue-700"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 lucide lucide-log-out-icon lucide-log-out"><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/></svg>
                         <a class="hover:text-blue-700" href="{{ route('logout') }}">Logout</a>
                     </li>
                 @endauth
@@ -86,26 +91,31 @@
                 <a href="{{ route('contacts') }}">Contacts</a>
             </li>
             @guest
-            <li class="flex items-center gap-2 hover:text-blue-700">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 lucide lucide-log-in" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="m10 17 5-5-5-5"/><path d="M15 12H3"/><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/>
-                </svg>
-                <a href="{{ route('login') }}">Login</a>
-            </li>
+                <li class="flex items-center gap-2 hover:text-blue-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 lucide lucide-log-in" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="m10 17 5-5-5-5"/><path d="M15 12H3"/><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/>
+                    </svg>
+                    <a href="{{ route('login') }}">Login</a>
+                </li>
 
-            <li class="flex items-center gap-2 text-blue-700 border rounded py-2 px-2 hover:text-white hover:bg-blue-700 hover:border-blue-700">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M12 4v16m8-8H4" />
-                </svg>
-                <a href="{{ route('register') }}">Sign Up</a>
-            </li>
+                <li class="flex items-center gap-2 text-blue-700 border rounded py-2 px-2 hover:text-white hover:bg-blue-700 hover:border-blue-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 4v16m8-8H4" />
+                    </svg>
+                    <a href="{{ route('register') }}">Sign Up</a>
+                </li>
             @endguest
             @auth
                 <li>
-                    <a class="hover:text-blue-700" href="">Account</a>
+                    <a href="{{ route('homepageApp') }}"
+                        class="flex items-center justify-center px-2 rounded-full bg-blue-600 text-white font-semibold text-lg hover:opacity-80 transition">
+                        {{ strtoupper(auth()->user()->name) }} enter App
+                    </a>
                 </li>
-                <li>
+
+                <li class="flex items-center gap-1 hover:text-blue-700"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 lucide lucide-log-out-icon lucide-log-out"><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/></svg>
                     <a class="hover:text-blue-700" href="{{ route('logout') }}">Logout</a>
                 </li>
             @endauth

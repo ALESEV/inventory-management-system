@@ -54,7 +54,7 @@
                         <a href="#"
                         class="inline-block mt-6 rounded border border-white text-white 
                                 font-semibold px-5 py-2 sm:px-6 sm:py-3 
-                                bg-blue-700 hover:bg-blue-500 transition">
+                                bg-blue-700 hover:bg-white/50 hover:text-blue-700 transition">
                             Start Now
                         </a>
                     </div>

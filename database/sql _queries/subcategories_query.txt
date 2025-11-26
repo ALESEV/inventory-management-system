@@ -1,0 +1,16 @@
+INSERT INTO subcategories (category_id, name, slug) VALUES 
+  (1, 'Chairs', 'chairs'),
+  (1, 'Computers', 'computers'),
+  (1, 'Desks', 'desks'),
+  (1, 'Printers', 'printers'),
+  (2, 'Electrical', 'electrical'),
+  (2, 'Lumber', 'lumber'),
+  (2, 'Plumbing', 'plumbing'),
+  (4, 'Air Conditioner', 'air-conditioner'),
+  (4, 'Heaters', 'heaters'),
+  (4, 'Tools', 'tools'),
+  (6, 'Consulting', 'consulting'),
+  (6, 'Fees', 'fees'),
+  (6, 'Labor', 'labor'),
+  (7, 'Cookware', 'cookware'),
+  (7, 'Janitorial', 'janitorial');

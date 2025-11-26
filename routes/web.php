@@ -21,4 +21,6 @@ Route::post("/login", [AuthController::class, "loginPost"])->name("loginPost");
 
 Route::get("/logout", [AuthController::class, "logout"])->name("logout");
 
-Route::get("/app", [AppController::class, "homepageApp"])->middleware('auth')->name("homepageApp");
+Route::get("/app", [AppController::class, "homepageApp"])->middleware("auth")->name("homepageApp");
+
+Route::get("/app/inventory/products", [AppController::class, "appInventoryProducts"])->middleware("auth")->name("appInventoryProducts");

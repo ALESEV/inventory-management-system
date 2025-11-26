@@ -39,7 +39,7 @@
                 <img class="h-[220px] rounded-bl-xl" src="{{ asset('storage/customer_support.jpg') }}" alt="Customer Support">
                 <div class="flex flex-col items-start px-5">
                     <div class="text-sm py-4 flex flex-col gap-3">
-                        <p>Our inventory experts have discussed workflows with thousands of businesses.</p>
+                        <p>Our inventory experts have discussed workflows with many businesses.</p>
                         <p>We'll help you figure out if Nova Inventory is a good fit, or if you should check out a competitor instead.</p>
                         <p>All in ten minutes or less.</p>
                         <p>No pressure. No nonsense.</p>
@@ -65,25 +65,25 @@
                 </div>
                 <div class="px-7 py-5 text-sm flex flex-col gap-4 ">
                     <div>
-                        <div class="flex items-center justify-between">
+                        <a href="" class="flex items-center justify-between">
                             <p>Purchase orders</p>
                             <x-tni-right-o class="w-3 h-3" />
-                        </div>
+                        </a>
                     </div>
                     <div>
-                        <div class="flex items-center justify-between ">
+                        <a href="" class="flex items-center justify-between ">
                             <p>Purchase quotes</p>
                             <x-tni-right-o class="w-3 h-3" />
-                        </div>
+                        </a>
                     </div>
                     <div class="border-b border-b-gray-400/50"></div>
                 </div>
                 <div class="px-7 text-sm flex flex-col gap-4">
                     <div>
-                        <div class="flex items-center justify-between">
+                        <a href="" class="flex items-center justify-between">
                             <p>Vendors</p>
                             <x-tni-right-o class="w-3 h-3" />
-                        </div>
+                        </a>
                     </div>
                 </div>
                 <div class="pr-10 pt-10">
@@ -104,49 +104,49 @@
                 </div>
                 <div class="px-7 py-5 text-sm flex flex-col gap-4 ">
                     <div>
-                        <div class="flex items-center justify-between">
+                        <a href="" class="flex items-center justify-between">
                             <p>Products</p>
                             <x-tni-right-o class="w-3 h-3" />
-                        </div>
+                        </a>
                     </div>
                     <div>
-                        <div class="flex items-center justify-between ">
+                        <a href="" class="flex items-center justify-between ">
                             <p>Reorder stock</p>
                             <x-tni-right-o class="w-3 h-3" />
-                        </div>
+                        </a>
                     </div>
                     <div>
-                        <div class="flex items-center justify-between ">
+                        <a href="" class="flex items-center justify-between ">
                             <p>Current stock</p>
                             <x-tni-right-o class="w-3 h-3" />
-                        </div>
+                        </a>
                     </div>
                     <div class="border-b border-b-gray-400/50"></div>
                 </div>
                 <div class="px-7 text-sm flex flex-col gap-4">
                     <div>
-                        <div class="flex items-center justify-between">
+                        <a href="" class="flex items-center justify-between">
                             <p>Stock transfers</p>
                             <x-tni-right-o class="w-3 h-3" />
-                        </div>
+                        </a>
                     </div>
                     <div>
-                        <div class="flex items-center justify-between">
+                        <a href="" class="flex items-center justify-between">
                             <p>Stock adjustments</p>
                             <x-tni-right-o class="w-3 h-3" />
-                        </div>
+                        </a>
                     </div>
                     <div>
-                        <div class="flex items-center justify-between">
+                        <a href="" class="flex items-center justify-between">
                             <p>Stock counts</p>
                             <x-tni-right-o class="w-3 h-3" />
-                        </div>
+                        </a>
                     </div>
                     <div>
-                        <div class="flex items-center justify-between">
+                        <a href="" class="flex items-center justify-between">
                             <p>Stockroom scans</p>
                             <x-tni-right-o class="w-3 h-3" />
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -164,25 +164,25 @@
                 </div>
                 <div class="px-7 py-5 text-sm flex flex-col gap-4 ">
                     <div>
-                        <div class="flex items-center justify-between">
+                        <a href="" class="flex items-center justify-between">
                             <p>Sales orders</p>
                             <x-tni-right-o class="w-3 h-3" />
-                        </div>
+                        </a>
                     </div>
                     <div>
-                        <div class="flex items-center justify-between ">
+                        <a href="" class="flex items-center justify-between ">
                             <p>Sales quotes</p>
                             <x-tni-right-o class="w-3 h-3" />
-                        </div>
+                        </a>
                     </div>
                     <div class="border-b border-b-gray-400/50"></div>
                 </div>
                 <div class="px-7 text-sm flex flex-col gap-4">
                     <div>
-                        <div class="flex items-center justify-between">
+                        <a href="" class="flex items-center justify-between">
                             <p>Customers</p>
                             <x-tni-right-o class="w-3 h-3" />
-                        </div>
+                        </a>
                     </div>
                 </div>
                 <div class="pl-10 pt-10">
@@ -206,44 +206,44 @@
                 <div class="grid grid-cols-4 gap-2">
                     <div class="px-7 py-5 text-sm flex flex-col gap-4 ">
                         <div>
-                            <div class="flex items-center justify-between">
+                            <a href="" class="flex items-center justify-between">
                                 <p>Purchasing</p>
                                 <x-tni-right-o class="w-3 h-3" />
-                            </div>
+                            </a>
                         </div>
                         <div>
-                            <div class="flex items-center justify-between ">
+                            <a href="" class="flex items-center justify-between ">
                                 <p>Sales</p>
                                 <x-tni-right-o class="w-3 h-3" />
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="px-7 py-5 text-sm flex flex-col gap-4 ">
                         <div>
-                            <div class="flex items-center justify-between">
+                            <a href="" class="flex items-center justify-between">
                                 <p>Reordering and forecasting</p>
                                 <x-tni-right-o class="w-3 h-3" />
-                            </div>
+                            </a>
                         </div>
                         <div>
-                            <div class="flex items-center justify-between ">
+                            <a href="" class="flex items-center justify-between ">
                                 <p>Audit log</p>
                                 <x-tni-right-o class="w-3 h-3" />
-                            </div>
+                            </a>
                         </div>
                         <div>
-                            <div class="flex items-center justify-between">
+                            <a href="" class="flex items-center justify-between">
                                 <p>Stock levels</p>
                                 <x-tni-right-o class="w-3 h-3" />
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="px-7 py-5 text-sm flex flex-col gap-4 ">
                         <div>
-                            <div class="flex items-center justify-between ">
+                            <a href="" class="flex items-center justify-between ">
                                 <p>Payment and accounting</p>
                                 <x-tni-right-o class="w-3 h-3" />
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="pr-10 pt-10">

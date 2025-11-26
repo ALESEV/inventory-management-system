@@ -1,0 +1,28 @@
+INSERT INTO products (
+  subcategory_id,
+  name,
+  slug,
+  sku,
+  description,
+  barcode,
+  brand,
+  image_url,
+  quantity,
+  price,
+  location,
+  date_received
+)
+VALUES (
+  1,
+  'Task Chair - Red',
+  'task-chair-red',
+  '3200019',
+  'High backed, adjustible in four directions, and in a stylish red color.',
+  '0487080000562',
+  'HotSeat Co',
+  'storage/products/red_chair.png',
+  1,
+  49.00,
+  'Office',
+  '2025-11-25'
+);

@@ -1,0 +1,8 @@
+INSERT INTO categories (name, slug) VALUES 
+  ('Assets', 'assets'),
+  ('Field Service', 'field-service'),
+  ('Labor', 'labor'),
+  ('Rental Equipment', 'rental-equipment'),
+  ('Rental Fees', 'rental-fees'),
+  ('Services', 'services'),
+  ('Wholesale', 'wholesale');

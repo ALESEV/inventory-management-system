@@ -1,0 +1,26 @@
+INSERT INTO products (
+  subcategory_id,
+  name,
+  sku,
+  description,
+  barcode,
+  brand,
+  image_url,
+  quantity,
+  price,
+  location,
+  date_received
+)
+VALUES (
+  8,
+  '8000 BTU Portable Air Conditioner',
+  '3200028',
+  '8,000 BTU Portable Air Conditioner. For buildings where tenants are prohibited from using window units.',
+  '320586',
+  'AirCool',
+  'storage/products/8000_BTU_AirCool.png',
+  1,
+  949.00,
+  'Warehouse',
+  '2025-11-25'
+);

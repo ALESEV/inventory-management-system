@@ -1,0 +1,28 @@
+INSERT INTO products (
+  subcategory_id,
+  name,
+  slug,
+  sku,
+  description,
+  barcode,
+  brand,
+  image_url,
+  quantity,
+  price,
+  location,
+  date_received
+)
+VALUES (
+  2,
+  '16" Laptop - 512GB',
+  '16inch-laptop-512gb',
+  '3200018',
+  'Full sized laptop with an easy-on the eyes sized screen. Ideal for workers who are not switching between locations frequently.',
+  '320564',
+  'Asus',
+  'storage/products/lenovo_laptop_16inch_512gb.png',
+  1,
+  699.00,
+  'Office',
+  '2025-12-25'
+);

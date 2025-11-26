@@ -1,7 +1,7 @@
 <div class="fixed left-0 top-0 h-screen w-[70px] bg-blue-900/95 text-white flex flex-col items-center justify-between py- shadow-xl">
 
     <div class="flex flex-col items-center">
-        <a href="" class="mt-5 mb-4">
+        <a href="" class="mt-3 mb-4">
             <img class="w-9 cursor-pointer hover:opacity-70" 
                 src="{{ asset('storage/logo_white.png') }}" 
                 alt="Nova Logo">

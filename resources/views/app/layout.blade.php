@@ -14,7 +14,7 @@
 
     @include('app.menu-bar')
 
-    <main class="ml-[70px] p-6">
+    <main class="ml-[70px]">
         @yield("main")
     </main>
 

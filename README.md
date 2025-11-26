@@ -38,3 +38,9 @@ php artisan route:list
 
 npm install lucide
 https://lucide.dev/icons/
+
+composer require blade-ui-kit/blade-icons
+php artisan vendor:publish --tag=blade-icons
+composer require andreiio/blade-iconoir
+composer require codeat3/blade-teeny-icons
+composer require codeat3/blade-fluentui-system-icons

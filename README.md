@@ -44,3 +44,5 @@ php artisan vendor:publish --tag=blade-icons
 composer require andreiio/blade-iconoir
 composer require codeat3/blade-teeny-icons
 composer require codeat3/blade-fluentui-system-icons
+
+composer require livewire/livewire

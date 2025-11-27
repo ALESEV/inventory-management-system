@@ -14,9 +14,8 @@
 
 <div class="min-h-screen flex items-center justify-center bg-blue-50/40 py-10 px-4">
 
-    <div class="bg-white shadow-md rounded-2xl p-8 w-full max-w-md border border-blue-100 relative">
+    <div class="bg-white shadow-sm rounded-2xl p-8 w-full max-w-md border border-blue-100 relative">
 
-        <!-- Top bar with logo + title -->
         <div class="flex items-center gap-4 mb-8 border-b pb-4">
             <a href="{{ route('home') }}">
                 <img src="{{ asset('storage/logo.png') }}" class="w-14" alt="Nova Inventory Logo">
@@ -27,13 +26,10 @@
         <form action="{{ route('loginPost') }}" method="post" class="space-y-5">
             @csrf
 
-            <!-- Email -->
             <div class="flex flex-col">
                 <label class="text-sm font-medium text-gray-700 mb-1">Email</label>
                 <div class="flex items-center gap-2 border border-gray-300 rounded-lg px-3 py-2 focus-within:ring-2 focus-within:ring-blue-400">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 12H8m8 0l-4 4m4-4l-4-4M4 6h16v12H4z" />
-                    </svg>
+                    <x-iconoir-mail class="text-blue-600 w-5 h-5" />
                     <input 
                         type="email" 
                         name="email"
@@ -46,13 +42,10 @@
                 @enderror
             </div>
 
-            <!-- Password -->
             <div class="flex flex-col">
                 <label class="text-sm font-medium text-gray-700 mb-1">Password</label>
                 <div class="flex items-center gap-2 border border-gray-300 rounded-lg px-3 py-2 focus-within:ring-2 focus-within:ring-blue-400">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6-8h12v10H6V9zm5-5h2a3 3 0 013 3v2H8V7a3 3 0 013-3z" />
-                    </svg>
+                    <x-tni-password-o class="text-blue-600 w-5 h-5" />
                     <input 
                         type="password" 
                         name="password"
@@ -71,7 +64,6 @@
 
         </form>
 
-        <!-- Footer -->
         <div class="mt-6 flex flex-col items-center gap-3">
 
             <a href="#" class="text-blue-600 hover:underline text-sm">

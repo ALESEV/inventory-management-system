@@ -62,6 +62,8 @@ class ProductCreate extends Component
             'date_received' => $this->date_received,
         ]);
 
+        $this->dispatch('productCreated'); 
+
         $this->reset([
             'subcategory_id', 
             'name', 

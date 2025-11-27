@@ -26,9 +26,35 @@
             </a>
 
             {{-- Inventory --}}
-            <a href="{{ route('appInventoryProducts') }}" class="hover:bg-white p-2 rounded-lg hover:text-blue-700">
-                <x-tni-box class="w-6 h-6 " />
-            </a>
+            <div x-data="{ open: false }" class="relative">
+                <a href="{{ route('appInventoryProducts') }}" 
+                @mouseenter="open = true" 
+                @mouseleave="open = false" 
+                @focus="open = true" 
+                @blur="open = false"
+                class="hover:bg-white p-2 rounded-lg hover:text-blue-700 flex items-center justify-center"
+                tabindex="0"
+                >
+                    <x-tni-box class="w-6 h-6" />
+                </a>
+
+                <div 
+                    x-show="open" 
+                    x-transition
+                    @mouseenter="open = true" 
+                    @mouseleave="open = false"
+                    class="absolute left-full top-0 ml-2 w-40 bg-white rounded shadow-lg z-50 text-black"
+                    style="display: none;"
+                >
+                    <p class="p-3 text-sm text-blue-700">Inventory</p>
+                    <div>
+                        <a href="{{ route('appInventoryProducts') }}" class="flex items-center gap-2 text-sm px-4 py-2 hover:bg-blue-100">
+                            <x-tni-box class="w-5 h-5" />
+                            Products
+                        </a>
+                    </div>
+                </div>
+            </div>
 
             {{-- Purchasing --}}
             <a href="" class="hover:bg-white p-2 rounded-lg hover:text-yellow-700">
@@ -45,19 +71,15 @@
 
     <div class="flex flex-col items-center mb-5">
         
-            {{-- Report --}}
+
             <a href="" class="hover:bg-white p-2 rounded-lg hover:text-yellow-600"">
                 <x-iconoir-shop-window class="w-7 h-7 " />
             </a>
 
-
-            {{-- Report --}}
             <a href="" class="hover:bg-white p-2 rounded-lg hover:text-yellow-600"">
                 <x-fluentui-apps-add-in-16-o class="w-7 h-7 " />
             </a>
 
-
-            {{-- Report --}}
             <a href="" class="hover:bg-white p-2 rounded-lg hover:text-yellow-600">
                 <x-iconoir-settings class="w-7 h-7 " />
             </a>

@@ -12,7 +12,7 @@
             <a href="">
                 <x-fluentui-question-circle-28-o class="w-6 h-6 text-blue-500 hover:text-blue-800" />
             </a>
-            <a href="{{ route('homepageApp') }}" class="bg-blue-700 text-white text-sm font-semibold rounded-full px-2 py-1 hover:bg-blue-700/50">
+            <a href="{{ route('userAdmin') }}" class="bg-blue-700 text-white text-sm font-semibold rounded-full px-2 py-1 hover:bg-blue-700/50">
                 {{ strtoupper(auth()->user()->name[0]) }}
             </a>
         </div>

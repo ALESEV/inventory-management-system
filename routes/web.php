@@ -26,4 +26,6 @@ Route::get("/app", [AppController::class, "homepageApp"])->middleware("auth")->n
 
 Route::get("/app/inventory/products", [AppController::class, "appInventoryProducts"])->middleware("auth")->name("appInventoryProducts");
 
-Route::get('/app/inventory/products/{id}', [ProductController::class, 'show'])->name('product.show');
+Route::get("/app/inventory/products/{id}", [ProductController::class, "show"])->name("product.show");
+
+Route::get("/user-admin", [AppController::class, "userAdminDashboard"])->name("userAdmin");

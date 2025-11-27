@@ -12,4 +12,9 @@ class Subcategory extends Model
         "slug",
         "category_id"
     ];
+    
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
 }

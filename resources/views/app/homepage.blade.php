@@ -20,7 +20,7 @@
         <div class="container mx-auto w-[1000px]">
             <div class="p-6">
                 <h1 class="text-3xl font-bold text-gray-700">Hello, {{ auth()->user()->name }} </h1>
-                <h3 class="text-lg text-gray-700">You can showcase your products and real-time stock levels with Nova Inventory.</h3>
+                <h3 class="text-lg text-gray-700">Let's get to work!</h3>
             </div>
         </div>
 

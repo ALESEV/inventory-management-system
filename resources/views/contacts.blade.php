@@ -24,7 +24,7 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-14">
 
-            <div class="flex flex-col items-center bg-blue-50 hover:bg-blue-100 transition rounded-2xl shadow-md p-6 text-center">
+            <div class="flex flex-col items-center bg-blue-50  transition rounded-2xl shadow-md p-6 text-center">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round">
                     <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/>
@@ -33,7 +33,7 @@
                 <p class="text-gray-700 mt-2">+373 68 111 000</p>
             </div>
 
-            <div class="flex flex-col items-center bg-blue-50 hover:bg-blue-100 transition rounded-2xl shadow-md p-6 text-center">
+            <div class="flex flex-col items-center bg-blue-50 transition rounded-2xl shadow-md p-6 text-center">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round">
                     <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/>
@@ -43,7 +43,7 @@
                 <p class="text-gray-700 mt-2">support@novainventory.com</p>
             </div>
 
-            <div class="flex flex-col items-center bg-blue-50 hover:bg-blue-100 transition rounded-2xl shadow-md p-6 text-center">
+            <div class="flex flex-col items-center bg-blue-50 transition rounded-2xl shadow-md p-6 text-center">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round">
                     <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/>

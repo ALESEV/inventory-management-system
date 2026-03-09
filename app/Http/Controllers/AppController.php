@@ -28,7 +28,6 @@ class AppController extends Controller
 
         $products = Product::all();
 
-        // (price * quantity)
         $totalPrice = $products->sum(function ($product) {
             return $product->price * $product->quantity;
         });

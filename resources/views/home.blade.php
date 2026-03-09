@@ -80,7 +80,7 @@
 
             <div class="w-full lg:w-1/2 flex flex-col lg:pl-8">
                 <h2 class="text-3xl lg:text-4xl font-extrabold text-gray-800 mb-6">
-                    Inventory management software with Nova Inventory
+                    Inventory management software with Nova Flow
                 </h2>
                 <p class="text-lg lg:text-2xl leading-relaxed">
                     Take control of your stock with Nova inventory software for small businesses. 

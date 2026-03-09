@@ -6,7 +6,7 @@
         <img src="{{ asset('storage/contacts.jpg') }}" class="w-full h-full object-cover opacity-90">
 
         <div class="absolute top-1/2 left-16 xs:left-4 sm:left-8 -translate-y-1/2 text-white max-w-[90vw]">
-            <h1 class="text-6xl sm:text-4xl xs:text-3xl font-extrabold leading-tight">Contact Nova Inventory Team</h1>
+            <h1 class="text-6xl sm:text-4xl xs:text-3xl font-extrabold leading-tight">Contact Nova Flow Team</h1>
             <p class="text-2xl sm:text-xl xs:text-lg mt-3">We’re here to help, anytime you need us.</p>
         </div>
     </div>

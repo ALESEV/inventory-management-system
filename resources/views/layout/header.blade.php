@@ -4,7 +4,7 @@
 
         <a class="flex items-center gap-2" href="{{ route('home') }}">
             <img class="w-10" src="{{ asset('storage/logo.png') }}" alt="Logo Nova Inventory">
-            <h1 class="text-blue-700 font-semibold hover:text-black">Nova Inventory</h1>                
+            <h1 class="text-blue-700 font-semibold hover:text-black">Nova Flow</h1>                
         </a>
 
         <button @click="open = !open" class="lg:hidden text-blue-700 focus:outline-none">

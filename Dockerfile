@@ -15,6 +15,9 @@ COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
     && apt-get install -y nodejs
 
+# Increase PHP memory limit for Laravel optimization
+RUN echo "memory_limit=512M" > /usr/local/etc/php/conf.d/memory-limit.ini
+
 # Set working dir
 WORKDIR /var/www/html
 
